@@ -1,0 +1,71 @@
+package th.co.extosoft.app.biz;
+
+import java.util.List;
+
+import th.co.extosoft.app.db.AppTierDB;
+import th.co.extosoft.app.itf.ConfigurationRequest;
+import th.co.extosoft.app.itf.ConfigurationResponse;
+
+public class AppTierBusiness {
+
+	public void callGetConfig(ConfigurationRequest configReqs) {
+		List<ConfigurationResponse> configResp = null;
+		//ConfigurationRequest configReqs = new ConfigurationRequest();
+		AppTierDB appTierDB = new AppTierDB();
+		configResp = appTierDB.queryConfig(configReqs);
+		
+		String configId = "";
+		String configName = "";
+		String configValue = "";
+		String configDttm = "";
+		String configBy = "";
+		for(int i = 0; i < configResp.size();i++){
+			configId = "" + configResp.get(i).getConfigId();
+			configName = configResp.get(i).getConfigName();
+			configValue = configResp.get(i).getConfigValue();
+			configDttm = configResp.get(i).getConfigDttm();
+			configBy = configResp.get(i).getConfigBy();
+			
+			System.out.println("ConfigId[" + i + "] --> " + configId);
+			System.out.println("ConfigName[" + i + "] --> " + configName);
+			System.out.println("ConfigValue[" + i + "] --> " + configValue);
+			System.out.println("ConfigDttm[" + i + "] --> " + configDttm);
+			System.out.println("ConfigBy[" + i + "] --> " + configBy);
+		}
+		
+	}
+
+	public void callAddConfig(ConfigurationRequest configReqs) {
+		AppTierDB appTierDB = new AppTierDB();
+		boolean completed = appTierDB.addConfig(configReqs);
+		
+		if(completed){
+			System.out.println("Add Successfully");
+		}else{
+			System.out.println("Add Failed");
+		}
+	}
+	
+	public void callUpdateConfig(ConfigurationRequest configReqs) {
+		AppTierDB appTierDB = new AppTierDB();
+		boolean completed = appTierDB.updateConfig(configReqs);
+		
+		if(completed){
+			System.out.println("Update Successfully");
+		}else{
+			System.out.println("Update Failed");
+		}
+	}
+	
+	public void callDeleteConfig(ConfigurationRequest configReqs) {
+		AppTierDB appTierDB = new AppTierDB();
+		boolean completed = appTierDB.deleteConfig(configReqs);
+		
+		if(completed){
+			System.out.println("Delete Successfully");
+		}else{
+			System.out.println("Delete Failed");
+		}
+	}
+	
+}

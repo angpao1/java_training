@@ -1,0 +1,6 @@
+WEB-INF/lib/beehive-controls.jar = ../../../modules/org.apache.beehive_1.0.2.2/apache-beehive-svn-snapshot/docs/controls/apidocs/javadoc/
+WEB-INF/lib/beehive-ejb-control.jar = ../../../modules/org.apache.beehive_1.0.2.2/apache-beehive-svn-snapshot/docs/system-controls/ejb/apidocs/javadoc/
+WEB-INF/lib/beehive-jdbc-control.jar = ../../../modules/org.apache.beehive_1.0.2.2/apache-beehive-svn-snapshot/docs/system-controls/jdbc/apidocs/javadoc/
+WEB-INF/lib/beehive-jms-control.jar = ../../../modules/org.apache.beehive_1.0.2.2/apache-beehive-svn-snapshot/docs/system-controls/jms/apidocs/javadoc/
+WEB-INF/lib/commons-logging.jar = http://jakarta.apache.org/commons/logging/commons-logging-1.0.4/docs/apidocs/
+WEB-INF/lib/commons-codec-1.3.jar = http://jakarta.apache.org/commons/codec/api-release/

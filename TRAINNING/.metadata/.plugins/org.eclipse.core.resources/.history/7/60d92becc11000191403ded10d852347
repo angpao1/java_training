@@ -1,0 +1,95 @@
+package th.co.extosoft.web.service;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.ArrayList;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+import javax.xml.rpc.Stub;
+
+import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
+
+import th.co.extosoft.app.itf.AppTierResponse;
+import th.co.extosoft.app.itf.ConfigurationRequest;
+import th.co.extosoft.app.itf.ConfigurationRequest;
+import th.co.extosoft.app.itf.ConfigurationResponse;
+import th.co.extosoft.app.ws.AppTierWS;
+import th.co.extosoft.app.ws.AppTierWSService;
+import th.co.extosoft.app.ws.AppTierWSService_Impl;
+import th.co.extosoft.web.init.WebTierConfigInit;
+
+/**
+ * Servlet implementation class for Servlet: WebTierTest
+ *
+ */
+ public class WebTierTest extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+   static final long serialVersionUID = 1L;
+   
+    /* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+	 */
+	public WebTierTest() {
+		super();
+	}   	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		doPost(request, response);
+	}  	
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		
+		   response.setContentType("text/html");
+		   response.setDateHeader("Expires", 0);
+		   response.setHeader("Cache-Control", "no-cache");
+		   response.setHeader("Pragma", "no-cache");
+		   response.setHeader("Content-Type", "application/json;charset=UTF-8");
+		   
+		   long requestTime = System.currentTimeMillis();
+		   ConfigurationRequest configReqs = null;
+		   AppTierResponse appTierResp = null;
+		   String jsonOutput = "";
+		   Gson gson = new GsonBuilder().disableHtmlEscaping().create();
+	        try {
+	        	configReqs = new ConfigurationRequest();
+//	        	configReqs.setConfigId(3);
+//	        	configReqs.setConfigName("Jack");
+//	        	configReqs.setConfigValue("Jack");
+	            System.out.println("-------- Start service : CallGetConfig --------");
+	            String endPoint = WebTierConfigInit.getConfig("APPTIER_URL");
+	            System.out.println("AppTierService : EndPoint --> " + endPoint);
+	            
+	            AppTierWSService service = (AppTierWSService) new AppTierWSService_Impl(endPoint + "?WSDL");
+	            AppTierWS port = (AppTierWS) service.getAppTierWSSoapPort();
+//	            ((Stub) port)._setProperty("weblogic.wsee.transport.connection.timeout", connTrns);
+//	            ((Stub) port)._setProperty("weblogic.wsee.transport.read.timeout", reqsTrns);
+	            ((Stub) port)._setProperty("javax.xml.rpc.service.endpoint.address", endPoint);
+	            System.out.println("AppTierService CallGetConfig Request : " + gson.toJson(configReqs));
+	            appTierResp = port.callGetData(configReqs);
+	            System.out.println("AppTierService CallGetConfig Response : " + gson.toJson(appTierResp));
+        	   	jsonOutput = gson.toJson(appTierResp);
+
+	        } catch (Exception ex) {
+	            System.out.println("Exception --> " + ex.getMessage());
+	        } finally {
+        	   	PrintWriter out = response.getWriter();
+	       		out.write(jsonOutput);
+	       		out.flush();
+	            out.close();
+	            System.out.println("-------- End service : CallGetConfig in " + (System.currentTimeMillis() - requestTime) + " ms. --------");
+	        }
+		   
+		   
+	}   	  	    
+}

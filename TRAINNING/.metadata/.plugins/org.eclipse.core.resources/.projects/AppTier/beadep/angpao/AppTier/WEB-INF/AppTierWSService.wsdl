@@ -1,0 +1,250 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<s0:definitions name="AppTierWSServiceDefinitions" targetNamespace="http://th/co/extosoft/app/ws" xmlns="" xmlns:s0="http://schemas.xmlsoap.org/wsdl/" xmlns:s1="http://th/co/extosoft/app/ws" xmlns:s2="http://schemas.xmlsoap.org/wsdl/soap/">
+  <s0:types>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:th.co.extosoft.app.itf" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="java:java.util"/>
+      <xs:complexType name="AppTierResponse">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="ConfigRespList" nillable="true" type="java:List" xmlns:java="java:java.util"/>
+          <xs:element minOccurs="1" name="ErrorMessage" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="Status" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfigurationResponse">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="ConfigBy" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="ConfigDttm" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="ConfigId" nillable="false" type="xs:int"/>
+          <xs:element minOccurs="1" name="ConfigName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="ConfigValue" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+      <xs:complexType name="ConfigurationRequest">
+        <xs:sequence>
+          <xs:element minOccurs="1" name="ConfigBy" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="ConfigDttm" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="ConfigId" nillable="false" type="xs:int"/>
+          <xs:element minOccurs="1" name="ConfigName" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="ConfigValue" nillable="true" type="xs:string"/>
+          <xs:element minOccurs="1" name="DeleteConfigIdList" nillable="true" type="xs:string"/>
+        </xs:sequence>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="java:java.util" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="http://schemas.xmlsoap.org/soap/encoding/"/>
+      <xs:complexType name="List">
+        <xs:complexContent>
+          <xs:restriction base="soapenc:Array" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/"/>
+        </xs:complexContent>
+      </xs:complexType>
+    </xs:schema>
+    <xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" targetNamespace="http://th/co/extosoft/app/ws" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+      <xs:import namespace="java:th.co.extosoft.app.itf"/>
+      <xs:import namespace="java:java.util"/>
+      <xs:element name="callDeleteData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callDeleteDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getListConfigurationResponse">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getListConfigurationResponseResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="java:List" xmlns:java="java:java.util"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getConfigurationResponse">
+        <xs:complexType>
+          <xs:sequence/>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="getConfigurationResponseResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="java:ConfigurationResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callAddData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callAddDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callUpdateData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callUpdateDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callGetData">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+      <xs:element name="callGetDataResponse">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:schema>
+  </s0:types>
+  <s0:message name="callDeleteData">
+    <s0:part element="s1:callDeleteData" name="parameters"/>
+  </s0:message>
+  <s0:message name="callDeleteDataResponse">
+    <s0:part element="s1:callDeleteDataResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="getListConfigurationResponse">
+    <s0:part element="s1:getListConfigurationResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="getListConfigurationResponseResponse">
+    <s0:part element="s1:getListConfigurationResponseResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="getConfigurationResponse">
+    <s0:part element="s1:getConfigurationResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="getConfigurationResponseResponse">
+    <s0:part element="s1:getConfigurationResponseResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="callAddData">
+    <s0:part element="s1:callAddData" name="parameters"/>
+  </s0:message>
+  <s0:message name="callAddDataResponse">
+    <s0:part element="s1:callAddDataResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="callUpdateData">
+    <s0:part element="s1:callUpdateData" name="parameters"/>
+  </s0:message>
+  <s0:message name="callUpdateDataResponse">
+    <s0:part element="s1:callUpdateDataResponse" name="parameters"/>
+  </s0:message>
+  <s0:message name="callGetData">
+    <s0:part element="s1:callGetData" name="parameters"/>
+  </s0:message>
+  <s0:message name="callGetDataResponse">
+    <s0:part element="s1:callGetDataResponse" name="parameters"/>
+  </s0:message>
+  <s0:portType name="AppTierWS">
+    <s0:operation name="callDeleteData" parameterOrder="parameters">
+      <s0:input message="s1:callDeleteData"/>
+      <s0:output message="s1:callDeleteDataResponse"/>
+    </s0:operation>
+    <s0:operation name="getListConfigurationResponse" parameterOrder="parameters">
+      <s0:input message="s1:getListConfigurationResponse"/>
+      <s0:output message="s1:getListConfigurationResponseResponse"/>
+    </s0:operation>
+    <s0:operation name="getConfigurationResponse" parameterOrder="parameters">
+      <s0:input message="s1:getConfigurationResponse"/>
+      <s0:output message="s1:getConfigurationResponseResponse"/>
+    </s0:operation>
+    <s0:operation name="callAddData" parameterOrder="parameters">
+      <s0:input message="s1:callAddData"/>
+      <s0:output message="s1:callAddDataResponse"/>
+    </s0:operation>
+    <s0:operation name="callUpdateData" parameterOrder="parameters">
+      <s0:input message="s1:callUpdateData"/>
+      <s0:output message="s1:callUpdateDataResponse"/>
+    </s0:operation>
+    <s0:operation name="callGetData" parameterOrder="parameters">
+      <s0:input message="s1:callGetData"/>
+      <s0:output message="s1:callGetDataResponse"/>
+    </s0:operation>
+  </s0:portType>
+  <s0:binding name="AppTierWSServiceSoapBinding" type="s1:AppTierWS">
+    <s2:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+    <s0:operation name="callDeleteData">
+      <s2:operation style="document"/>
+      <s0:input>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="getListConfigurationResponse">
+      <s2:operation style="document"/>
+      <s0:input>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="getConfigurationResponse">
+      <s2:operation style="document"/>
+      <s0:input>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="callAddData">
+      <s2:operation style="document"/>
+      <s0:input>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="callUpdateData">
+      <s2:operation style="document"/>
+      <s0:input>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+    <s0:operation name="callGetData">
+      <s2:operation style="document"/>
+      <s0:input>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:input>
+      <s0:output>
+        <s2:body parts="parameters" use="literal"/>
+      </s0:output>
+    </s0:operation>
+  </s0:binding>
+  <s0:service name="AppTierWSService">
+    <s0:port binding="s1:AppTierWSServiceSoapBinding" name="AppTierWSSoapPort">
+      <s2:address location="http://localhost:7001/AppTier/AppTierWS"/>
+    </s0:port>
+  </s0:service>
+</s0:definitions>

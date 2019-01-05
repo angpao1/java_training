@@ -1,0 +1,2 @@
+WEB-INF/lib/weblogic-controls.jar = http://edocs.bea.com/wlw/docs103/guide/reference/api
+WEB-INF/lib/weblogic-webservice-control.jar = http://edocs.bea.com/wlw/docs103/guide/reference/api

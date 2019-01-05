@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-project guid="AppTier_1680f8d8998_59d32cc44b53cc2b" version="5">
+	<web-app guid="AppTier_1680f8d899a_4e7137f487b20b24">
+		<web-app-type>com.m7.webapp.java</web-app-type>
+		<folder-mapping project-name="AppTier" project-uri="WebContent" web-app-uri="/"/>
+	</web-app>
+	<properties>
+		<property name="validation.compile" value="true"/>
+		<property name="validation.missingFile" value="true"/>
+		<property name="validation.unresolvedVar" value="false"/>
+		<property name="validation" value="true"/>
+		<property name="taglib.downloadRemote" value="true"/>
+		<property name="validation.resources" value="true"/>
+		<property name="validation.unresolvedType" value="true"/>
+		<property name="validation.compile.jspQuotation" value="false"/>
+	</properties>
+</web-project>

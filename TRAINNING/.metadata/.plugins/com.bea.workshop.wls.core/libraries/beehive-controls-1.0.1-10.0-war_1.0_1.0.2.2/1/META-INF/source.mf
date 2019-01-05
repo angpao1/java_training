@@ -1,0 +1,4 @@
+WEB-INF/lib/beehive-controls.jar = ../../../modules/org.apache.beehive_1.0.2.2/src/apache-beehive-1.0.2.2-src.zip
+WEB-INF/lib/beehive-ejb-control.jar = ../../../modules/org.apache.beehive_1.0.2.2/src/apache-beehive-1.0.2.2-src.zip
+WEB-INF/lib/beehive-jdbc-control.jar = ../../../modules/org.apache.beehive_1.0.2.2/src/apache-beehive-1.0.2.2-src.zip
+WEB-INF/lib/beehive-jms-control.jar = ../../../modules/org.apache.beehive_1.0.2.2/src/apache-beehive-1.0.2.2-src.zip

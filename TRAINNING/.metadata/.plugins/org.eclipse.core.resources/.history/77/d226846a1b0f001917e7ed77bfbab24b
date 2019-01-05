@@ -1,0 +1,6 @@
+#Thu Jan 03 12:50:03 ICT 2019
+eclipse.preferences.version=1
+informants/com.bea.workshop.controls.core.ControlExtension=com.bea.workshop.controls.core.informants.ControlExtensionInformant,com.bea.workshop.controls.core.informants.ControlExtensionValueAddInformant,
+informants/com.bea.workshop.controls.core.ControlImplementation=com.bea.workshop.controls.core.informants.ControlImplementationInformant,com.bea.workshop.controls.core.informants.ControlImplementationValueAddInformant,
+informants/com.bea.workshop.controls.core.ControlInterface=com.bea.workshop.controls.core.informants.ControlInterfaceInformant,
+informants/com.bea.workshop.webservices.core.webServiceSource=com.bea.workshop.webservices.core.informants.JWSInformant,

@@ -1,0 +1,200 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<j2ee:java-wsdl-mapping xmlns:j2ee="http://java.sun.com/xml/ns/j2ee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <j2ee:package-mapping>
+    <j2ee:package-type>java.util</j2ee:package-type>
+    <j2ee:namespaceURI>java:java.util</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:package-mapping>
+    <j2ee:package-type>th.co.extosoft.app.itf</j2ee:package-type>
+    <j2ee:namespaceURI>java:th.co.extosoft.app.itf</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:package-mapping>
+    <j2ee:package-type>th.co.extosoft.app.ws</j2ee:package-type>
+    <j2ee:namespaceURI>http://th/co/extosoft/app/ws</j2ee:namespaceURI>
+  </j2ee:package-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>java.util.List</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:java="java:java.util">java:List</j2ee:root-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>th.co.extosoft.app.itf.AppTierResponse</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:java="java:th.co.extosoft.app.itf">java:AppTierResponse</j2ee:root-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigRespList</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigRespList</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ErrorMessage</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ErrorMessage</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>Status</j2ee:java-variable-name>
+      <j2ee:xml-element-name>Status</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>th.co.extosoft.app.itf.ConfigurationResponse</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:java="java:th.co.extosoft.app.itf">java:ConfigurationResponse</j2ee:root-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigBy</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigBy</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigDttm</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigDttm</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigId</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigId</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigName</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigName</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigValue</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigValue</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:java-xml-type-mapping>
+    <j2ee:java-type>th.co.extosoft.app.itf.ConfigurationRequest</j2ee:java-type>
+    <j2ee:root-type-qname xmlns:java="java:th.co.extosoft.app.itf">java:ConfigurationRequest</j2ee:root-type-qname>
+    <j2ee:qname-scope>complexType</j2ee:qname-scope>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigBy</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigBy</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigDttm</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigDttm</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigId</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigId</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigName</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigName</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>ConfigValue</j2ee:java-variable-name>
+      <j2ee:xml-element-name>ConfigValue</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+    <j2ee:variable-mapping>
+      <j2ee:java-variable-name>DeleteConfigIdList</j2ee:java-variable-name>
+      <j2ee:xml-element-name>DeleteConfigIdList</j2ee:xml-element-name>
+    </j2ee:variable-mapping>
+  </j2ee:java-xml-type-mapping>
+  <j2ee:service-interface-mapping>
+    <j2ee:service-interface>javax.xml.rpc.Service</j2ee:service-interface>
+    <j2ee:wsdl-service-name xmlns:ws="http://th/co/extosoft/app/ws">ws:AppTierWSService</j2ee:wsdl-service-name>
+    <j2ee:port-mapping>
+      <j2ee:port-name>AppTierWSSoapPort</j2ee:port-name>
+      <j2ee:java-port-name>getAppTierWSSoapPort</j2ee:java-port-name>
+    </j2ee:port-mapping>
+  </j2ee:service-interface-mapping>
+  <j2ee:service-endpoint-interface-mapping>
+    <j2ee:service-endpoint-interface>th.co.extosoft.app.ws.AppTierWSPortType</j2ee:service-endpoint-interface>
+    <j2ee:wsdl-port-type xmlns:ws="http://th/co/extosoft/app/ws">ws:AppTierWS</j2ee:wsdl-port-type>
+    <j2ee:wsdl-binding xmlns:ws="http://th/co/extosoft/app/ws">ws:AppTierWSServiceSoapBinding</j2ee:wsdl-binding>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>callDeleteData</j2ee:java-method-name>
+      <j2ee:wsdl-operation>callDeleteData</j2ee:wsdl-operation>
+      <j2ee:wrapped-element></j2ee:wrapped-element>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>th.co.extosoft.app.itf.ConfigurationRequest</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callDeleteData</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>configReqs</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>th.co.extosoft.app.itf.AppTierResponse</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callDeleteDataResponse</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>return</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>getListConfigurationResponse</j2ee:java-method-name>
+      <j2ee:wsdl-operation>getListConfigurationResponse</j2ee:wsdl-operation>
+      <j2ee:wrapped-element></j2ee:wrapped-element>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>java.util.List</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:getListConfigurationResponseResponse</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>return</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>getConfigurationResponse</j2ee:java-method-name>
+      <j2ee:wsdl-operation>getConfigurationResponse</j2ee:wsdl-operation>
+      <j2ee:wrapped-element></j2ee:wrapped-element>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>th.co.extosoft.app.itf.ConfigurationResponse</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:getConfigurationResponseResponse</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>return</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>callAddData</j2ee:java-method-name>
+      <j2ee:wsdl-operation>callAddData</j2ee:wsdl-operation>
+      <j2ee:wrapped-element></j2ee:wrapped-element>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>th.co.extosoft.app.itf.ConfigurationRequest</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callAddData</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>configReqs</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>th.co.extosoft.app.itf.AppTierResponse</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callAddDataResponse</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>return</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>callUpdateData</j2ee:java-method-name>
+      <j2ee:wsdl-operation>callUpdateData</j2ee:wsdl-operation>
+      <j2ee:wrapped-element></j2ee:wrapped-element>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>th.co.extosoft.app.itf.ConfigurationRequest</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callUpdateData</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>configReqs</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>th.co.extosoft.app.itf.AppTierResponse</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callUpdateDataResponse</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>return</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+    <j2ee:service-endpoint-method-mapping>
+      <j2ee:java-method-name>callGetData</j2ee:java-method-name>
+      <j2ee:wsdl-operation>callGetData</j2ee:wsdl-operation>
+      <j2ee:wrapped-element></j2ee:wrapped-element>
+      <j2ee:method-param-parts-mapping>
+        <j2ee:param-position>0</j2ee:param-position>
+        <j2ee:param-type>th.co.extosoft.app.itf.ConfigurationRequest</j2ee:param-type>
+        <j2ee:wsdl-message-mapping>
+          <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callGetData</j2ee:wsdl-message>
+          <j2ee:wsdl-message-part-name>configReqs</j2ee:wsdl-message-part-name>
+          <j2ee:parameter-mode>IN</j2ee:parameter-mode>
+        </j2ee:wsdl-message-mapping>
+      </j2ee:method-param-parts-mapping>
+      <j2ee:wsdl-return-value-mapping>
+        <j2ee:method-return-value>th.co.extosoft.app.itf.AppTierResponse</j2ee:method-return-value>
+        <j2ee:wsdl-message xmlns:ws="http://th/co/extosoft/app/ws">ws:callGetDataResponse</j2ee:wsdl-message>
+        <j2ee:wsdl-message-part-name>return</j2ee:wsdl-message-part-name>
+      </j2ee:wsdl-return-value-mapping>
+    </j2ee:service-endpoint-method-mapping>
+  </j2ee:service-endpoint-interface-mapping>
+</j2ee:java-wsdl-mapping>

@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<servers>
+  <server auto-publish-setting="1" hostname="localhost" id="1_4_19_2_39_PM1" name="Oracle WebLogic Server v10.3 at localhost" runtime-id="Oracle WebLogic Server v10.3" server-type="com.bea.weblogic103.server" server-type-id="com.bea.weblogic103.server" timestamp="6" weblogic_domain_path="C:\bea10.3\user_projects\domains\angpao" weblogic_host_name="localhost" weblogic_is_remote="false" weblogic_port="7001" weblogic_use_bootprop="true" weblogic_use_config_xml="true">
+    <list key="modules" value0="AppTier::org.eclipse.jst.j2ee.server:AppTier::jst.web::2.4" value1="WebTier::org.eclipse.jst.j2ee.server:WebTier::jst.web::2.4"/>
+  </server>
+</servers>

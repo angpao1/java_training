@@ -1,0 +1,55 @@
+package th.co.extosoft.app.ws;
+
+import java.util.List;
+
+import javax.jws.*;
+
+import th.co.extosoft.app.biz.AppTierBusiness;
+import th.co.extosoft.app.itf.ConfigurationRequest;
+import th.co.extosoft.app.itf.ConfigurationResponse;
+
+@WebService
+public class AppTierWS2 {
+
+	@WebMethod
+	public List<ConfigurationResponse> callGetConfig(ConfigurationRequest configReqs) {
+		List<ConfigurationResponse> configResp = null;
+		AppTierBusiness appTierBusiness = new AppTierBusiness();
+		configResp = appTierBusiness.callGetConfig(configReqs);
+		return configResp;
+	}
+	
+	@WebMethod
+	public ConfigurationResponse callConfigurationResponse() {
+		
+		return new ConfigurationResponse();
+	}
+	
+	@WebMethod
+	public String callAddData(ConfigurationRequest configReqs) {
+		String msg = null;
+		AppTierBusiness appTierBusiness = new AppTierBusiness();
+		msg = appTierBusiness.callAddConfig(configReqs);
+		return msg;
+	}
+	
+	@WebMethod
+	public String callUpdateData(ConfigurationRequest configReqs) {
+		List<ConfigurationResponse> configResp = null;
+		AppTierBusiness appTierBusiness = new AppTierBusiness();
+		configResp = appTierBusiness.callGetConfig(configReqs);
+		return configResp;
+	}
+	
+	@WebMethod
+	public String callDeleteData(ConfigurationRequest configReqs) {
+		List<ConfigurationResponse> configResp = null;
+		AppTierBusiness appTierBusiness = new AppTierBusiness();
+		configResp = appTierBusiness.callGetConfig(configReqs);
+		return configResp;
+	}
+	
+	
+	
+	
+}

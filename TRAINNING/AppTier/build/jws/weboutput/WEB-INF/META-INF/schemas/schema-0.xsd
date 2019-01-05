@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="java:th.co.extosoft.app.itf" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="java:java.util"/>
+  <xs:complexType name="AppTierResponse">
+    <xs:sequence>
+      <xs:element name="ConfigRespList" type="java:List" minOccurs="1" nillable="true" xmlns:java="java:java.util"/>
+      <xs:element name="ErrorMessage" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="Status" type="xs:string" minOccurs="1" nillable="true"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConfigurationResponse">
+    <xs:sequence>
+      <xs:element name="ConfigBy" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="ConfigDttm" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="ConfigId" type="xs:int" minOccurs="1" nillable="false"/>
+      <xs:element name="ConfigName" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="ConfigValue" type="xs:string" minOccurs="1" nillable="true"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="ConfigurationRequest">
+    <xs:sequence>
+      <xs:element name="ConfigBy" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="ConfigDttm" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="ConfigId" type="xs:int" minOccurs="1" nillable="false"/>
+      <xs:element name="ConfigName" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="ConfigValue" type="xs:string" minOccurs="1" nillable="true"/>
+      <xs:element name="DeleteConfigIdList" type="xs:string" minOccurs="1" nillable="true"/>
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>

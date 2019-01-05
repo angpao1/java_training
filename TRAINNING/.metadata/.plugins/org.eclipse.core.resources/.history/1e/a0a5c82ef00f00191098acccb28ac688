@@ -1,0 +1,11 @@
+package th.co.extosoft.app.ws;
+
+import javax.jws.*;
+
+@WebService
+public class AppTierWS2 {
+
+	@WebMethod
+	public void hello() {
+	}
+}

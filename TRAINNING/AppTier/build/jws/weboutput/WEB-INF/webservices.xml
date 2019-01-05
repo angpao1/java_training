@@ -1,0 +1,16 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<webservices xmlns="http://java.sun.com/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <webservice-description>
+    <webservice-description-name>th.co.extosoft.app.ws.AppTierWS</webservice-description-name>
+    <wsdl-file>WEB-INF/AppTierWSService.wsdl</wsdl-file>
+    <jaxrpc-mapping-file>WEB-INF/AppTierWSService.xml</jaxrpc-mapping-file>
+    <port-component>
+      <port-component-name>AppTierWSSoapPort</port-component-name>
+      <wsdl-port xmlns:ws="http://th/co/extosoft/app/ws">ws:AppTierWSSoapPort</wsdl-port>
+      <service-endpoint-interface>th.co.extosoft.app.ws.AppTierWSPortType</service-endpoint-interface>
+      <service-impl-bean>
+        <servlet-link>AppTierWSServiceServlethttp</servlet-link>
+      </service-impl-bean>
+    </port-component>
+  </webservice-description>
+</webservices>

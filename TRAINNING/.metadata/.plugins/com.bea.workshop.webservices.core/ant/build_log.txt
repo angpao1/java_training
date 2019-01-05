@@ -1,0 +1,40 @@
+Buildfile: E:\Extosoft\TRAINNING\.metadata\.plugins\com.bea.workshop.webservices.core\ant\build.xml
+Trying to override old definition of task wsgen
+
+fork_build_client:
+     [java] Buildfile: E:\Extosoft\TRAINNING\.metadata\.plugins\com.bea.workshop.webservices.core\ant\build.xml
+
+     [java] build_client:
+     [java] [clientgen] Ignoring JAX-WS options - building a JAX-RPC client
+     [java] [clientgen] 
+     [java] [clientgen] *********** jax-rpc clientgen attribute settings ***************
+     [java] [clientgen] 
+     [java] [clientgen] wsdlURI: file:/E:/Extosoft/TRAINNING/AppTier/src/th/co/extosoft/app/ws/AppTierWSService.wsdl
+     [java] [clientgen] serviceName : AppTierWSService
+     [java] [clientgen] packageName : null
+     [java] [clientgen] destDir : C:\Users\angpao\AppData\Local\Temp\_vhn32z
+     [java] [clientgen] handlerChainFile : null
+     [java] [clientgen] generatePolicyMethods : false
+     [java] [clientgen] autoDetectWrapped : true
+     [java] [clientgen] jaxRPCWrappedArrayStyle : true
+     [java] [clientgen] generateAsyncMethods : true
+     [java] [clientgen] 
+     [java] [clientgen] *********** jax-rpc clientgen attribute settings end ***************
+     [java] [clientgen] Package name is th.co.extosoft.app.ws
+     [java] [clientgen] DestDir is C:\Users\angpao\AppData\Local\Temp\_vhn32z
+     [java] [clientgen] class name is AppTierWS_Stub
+     [java] [clientgen] service class name is AppTierWSService
+     [java] [clientgen] Porttype name is AppTierWS
+     [java] [clientgen] service impl name is AppTierWSService_Impl
+     [java]      [null] Compiling 7 source files to C:\Users\angpao\AppData\Local\Temp\_vhn32z
+     [java] [clientgen] Note: C:\Users\angpao\AppData\Local\Temp\_vhn32z\th\co\extosoft\app\ws\AppTierWS_Stub.java uses unchecked or unsafe operations.
+     [java] [clientgen] Note: Recompile with -Xlint:unchecked for details.
+     [java]      [null] Building jar: E:\Extosoft\TRAINNING\AppTier\WebContent\WEB-INF\lib\AppTierWSService.jar
+     [java] [AntUtil.deleteDir] Deleting directory C:\Users\angpao\AppData\Local\Temp\_vhn32z
+
+     [java] BUILD SUCCESSFUL
+     [java] Total time: 3 seconds
+BUILD SUCCESSFUL
+
+BUILD SUCCESSFUL
+Total time: 4 seconds

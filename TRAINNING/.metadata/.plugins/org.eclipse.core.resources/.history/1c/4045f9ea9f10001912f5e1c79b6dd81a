@@ -1,0 +1,149 @@
+package th.co.extosoft.web.init;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.HashMap;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import th.co.extosoft.app.db.AppTierDB;
+import th.co.extosoft.app.itf.ConfigurationRequest;
+import th.co.extosoft.app.itf.ConfigurationResponse;
+
+/**
+ * Servlet implementation class for Servlet: AppTierConfigInit
+ *
+ */
+ public class AppTierConfigInit extends javax.servlet.http.HttpServlet implements javax.servlet.Servlet {
+   static final long serialVersionUID = 1L;
+   
+    /* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#HttpServlet()
+	 */
+	public AppTierConfigInit() {
+		super();
+	}   	
+	
+	private static final String CONTENT_TYPE = "text/html";
+	
+	private static long lastReloadTime = 0L;
+	private static long reloadDelayTime = 30000;
+//	private static String configPath = System.getProperty("user.home") + "/conf/AppTier/AppTierConfig.properties";
+//	private static long fileLastUpdatetime = 0L;
+	private static HashMap<String, String> configs;
+	
+	public void init() throws ServletException {
+		super.init();
+		if(configs == null){
+			configs = new HashMap<String, String>();
+		}
+		reloadDelayTime = Long.parseLong(getInitParameter("reload"));
+		try {
+			
+			AppTierDB appTierDB = new AppTierDB();
+			ConfigurationRequest configReqs = null;
+			List<ConfigurationResponse> configRespList = null;
+			String key = "";
+			String value = "";
+			
+			if (System.currentTimeMillis() - lastReloadTime > reloadDelayTime) {
+				
+				configReqs = new ConfigurationRequest();
+				configRespList = appTierDB.queryLoadConfig(configReqs);
+
+				for (int i = 0; i < configRespList.size(); i++) {
+					key = (String) configRespList.get(i).getConfigName();
+					if (key != null) {
+						value = (String) configRespList.get(i).getConfigValue();
+						if (value != null) {
+							System.out.println("INIT CONFIG ON DATABASE");
+							if(key.equals("RELOAD_DELAY_TIME")){
+								reloadDelayTime = Long.parseLong(value);
+							}
+							System.out.println(key + " --> " + value);
+							configs.put(key, value);
+						}
+					}
+				}
+				lastReloadTime = System.currentTimeMillis();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+	}
+	
+	/* (non-Java-doc)
+	 * @see javax.servlet.http.HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
+	 */
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		// TODO Auto-generated method stub
+		String mode = request.getParameter("mode");
+		if("reload".equals(mode)){
+	        response.setContentType(CONTENT_TYPE);
+	        PrintWriter out = response.getWriter();
+	        out.println("<html>");
+	        out.println("<head><title>AppTierConfigInit</title></head>");
+	        out.println("<body bgcolor=\"#ffffff\">");
+	        reload();
+	        System.out.println("Init AppTierConfigInit Reload");
+	        out.println("<p>The servlet has received a GET. This is the reload.</p>");
+	        out.println("</body>");
+	        out.println("</html>");
+	        out.close();
+		}
+	}	
+	
+	public static void reload(){
+
+		if(configs == null){
+			configs = new HashMap<String, String>();
+		}
+		
+		try {
+			
+			AppTierDB appTierDB = new AppTierDB();
+			ConfigurationRequest configReqs = null;
+			List<ConfigurationResponse> configRespList = null;
+			String key = "";
+			String value = "";
+			
+			if (System.currentTimeMillis() - lastReloadTime > reloadDelayTime) {
+				
+				configReqs = new ConfigurationRequest();
+				configRespList = appTierDB.queryLoadConfig(configReqs);
+
+				for (int i = 0; i < configRespList.size(); i++) {
+					key = (String) configRespList.get(i).getConfigName();
+					if (key != null) {
+						value = (String) configRespList.get(i).getConfigValue();
+						if (value != null) {
+							System.out.println("RELOAD CONFIG ON DATABASE");
+//							configs.put(key, new String(value.getBytes("ISO-8859-1"), "UTF-8"));
+//							configs.put(key, new String(value.getBytes("UTF-8"), "UTF-8"));
+//							configs.put(key, Utility.ASCII2Unicode(value));
+							System.out.println(key + " --> " + value);
+							configs.put(key, value);
+						}
+					}
+				}
+				lastReloadTime = System.currentTimeMillis();
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		
+	}
+	
+	public static String getConfig(String configName, String configDefault) {
+		//reload();
+		if(configs == null){
+			return configDefault;
+		}else if(configs != null && configs.get(configName) == null){
+			return configDefault;
+		}
+		return (String) configs.get(configName);
+	}  	  	    
+}

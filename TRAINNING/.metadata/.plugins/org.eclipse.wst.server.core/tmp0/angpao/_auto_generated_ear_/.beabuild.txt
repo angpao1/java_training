@@ -1,0 +1,9 @@
+E\:/Extosoft/TRAINNING/AppTier/build/jws/weboutput = AppTier.war
+E\:/Extosoft/TRAINNING/WebTier/build/jws/weboutput = WebTier.war
+E\:/Extosoft/TRAINNING/WebTier/build/weboutput = WebTier.war
+E\:/Extosoft/TRAINNING/AppTier/WebContent = AppTier.war
+E\:/Extosoft/TRAINNING/AppTier/build/weboutput = AppTier.war
+E\:/Extosoft/TRAINNING/AppTier/build/classes = AppTier.war/WEB-INF/classes
+E\:/Extosoft/TRAINNING/AppTier/.xbean_bin = AppTier.war/WEB-INF/classes
+E\:/Extosoft/TRAINNING/WebTier/WebContent = WebTier.war
+E\:/Extosoft/TRAINNING/WebTier/build/classes = WebTier.war/WEB-INF/classes

@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema targetNamespace="http://th/co/extosoft/app/ws" elementFormDefault="qualified" attributeFormDefault="unqualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:import namespace="java:th.co.extosoft.app.itf"/>
+  <xs:import namespace="java:java.util"/>
+  <xs:element name="callDeleteData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="callDeleteDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getListConfigurationResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="java:List" xmlns:java="java:java.util"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConfigurationResponse">
+    <xs:complexType>
+      <xs:sequence/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="getConfigurationResponseResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="java:ConfigurationResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="callAddData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="callAddDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="callUpdateData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="callUpdateDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="callGetData">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="configReqs" type="java:ConfigurationRequest" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="callGetDataResponse">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="return" type="java:AppTierResponse" xmlns:java="java:th.co.extosoft.app.itf"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
