@@ -1,2 +1,1 @@
-move folder "conf" to HOME_DIRECTORY
-move folder "log" to HOME_DIRECTORY
+Java Training Course 3-Jan-2018 to 5-Jan-2018
